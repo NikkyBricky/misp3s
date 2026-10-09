@@ -10,5 +10,5 @@ else()
     set(PLATFORM_SRC timer_lin.cpp)
 endif()
 
-add_library(TimeMeter ${PLATFORM_SRC} time_meter.h)
+add_library(TimeMeter time_meter.cpp ${PLATFORM_SRC} time_meter.h time_meter_impl.h)
 target_include_directories(TimeMeter PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
